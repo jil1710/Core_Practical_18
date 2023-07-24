@@ -10,7 +10,6 @@ namespace Practical_18_API.Models
 
 		[Required]
 		[StringLength(50), MinLength(3)]
-		[RegularExpression(@"^([a-zA-z ]){1,50}", ErrorMessage = "Name only contains the Alphabets")]
 		public string Name { get; set; }
 
 		[Required]
@@ -20,7 +19,7 @@ namespace Practical_18_API.Models
 		public string PhoneNumber { get; set; }
 
 		[Required]
-		[StringLength(20)]
+		[StringLength(250)]
 		[DataType(DataType.EmailAddress)]
 		public string Email { get; set; }
 
